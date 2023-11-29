@@ -28,7 +28,7 @@ $(".merch-swiper").each(function (index) {
     navigation: {
       nextEl: ".swiper-next",
       prevEl: ".swiper-prev",
-      disabledClass: "is--disabled"
+      disabledClass: "is--disabl1  `ed"
     }
   });
 });
