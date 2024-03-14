@@ -108,7 +108,8 @@ function initPage(container) {
     setMobileNavOnDesktop();
 
   } else if /* Shop Archive */ (window.location.pathname.startsWith("/shop/")) {
-    initMerchArchiveSlider(); //
+    initMerchArchiveSlider();
+    initGlassDisplayButtons();
 
   } else if /* Release */ (window.location.pathname.startsWith("/release/")) {
     lazyloadHeroVideo();
@@ -202,7 +203,6 @@ function dismissPageLoader(loader) {
       clipPath: "inset(0 0 100% 0)",
       duration: 1,
       ease: wipeOut,
-      delay: 0.3,
       onComplete: resolve
     });
   });
@@ -874,7 +874,7 @@ function toggleNavigationMenu() {
   initLinkGroups(primaryLinksWrapper, '.primary-link', {
     dim: true,
     dimOpacity: 0.5,
-    dimDuration: 0.25,
+    dimDuration: 0.1,
   })
 
   // Reveal Secondary Links
@@ -883,12 +883,6 @@ function toggleNavigationMenu() {
     y: (isOpening ? 0 : "-0.5rem"),
     autoAlpha: (isOpening ? 1 : 0),
   }, (isOpening ? 0.5 : 0))
-
-  initLinkGroups(secondaryLinksWrapper, '.primary-link', {
-    dim: true,
-    dimOpacity: 0.5,
-    dimDuration: 0.25,
-  })
 
 }
 

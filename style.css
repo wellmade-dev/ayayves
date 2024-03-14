@@ -1012,7 +1012,7 @@ body {
   position: relative;
   cursor: pointer;
   overflow: hidden;
-  transition: color 0.2s;
+  transition: color 0.1s;
 }
 .navigation-menu .menu-content .links-col .secondary-links-w .secondary-link:hover {
   color: var(--text);
